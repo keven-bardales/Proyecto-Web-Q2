@@ -5,8 +5,8 @@ namespace Proyecto_Web_Q2.DTOs;
 public class ConfirmAgreementDto
 {
     [Required]
-    public string AgreementId = string.Empty;
+    public string AgreementId { get; set; } = string.Empty;
 
     [Required]
-    public bool Confirmed = false;
+    public bool Confirmed { get; set; } = false;
 }

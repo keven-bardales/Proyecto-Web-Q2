@@ -25,7 +25,7 @@ public class MediatorService
             IsActive = true,
             ActiveCases = 0,
             UserId = dto.UserId,
-            CreatedAt = DateTime.UtcNow
+            CreatedAt = DateTime.UtcNow,
         };
 
         var collection = _fireBaseService.GetCollection(CollectionName);
@@ -83,6 +83,7 @@ public class MediatorService
         mediator.Specialty = dto.Specialty;
         mediator.IsAvailable = dto.IsAvailable;
         mediator.IsActive = dto.IsActive;
+        mediator.UserId = dto.UserId;
 
         await documentRef.SetAsync(mediator);
 
